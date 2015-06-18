@@ -1,13 +1,15 @@
 '''
-Classes for playing a game of mastermind.  Create a new game object
+Classes for playing a game of mastermind.  Create a new Game object
 and then game.play_game()
-
 '''
-
 
 from random import randint
 
 class Code:
+    
+    """
+    If a code is not passed in, creates a random code from ASCII characters starting with 'A'
+    """
     
     def __init__(self, num_pegs = 4, code = None):
         self.num_pegs = num_pegs
@@ -56,7 +58,7 @@ class Guess:
 class Game:
 
     """
-    Initialist a Game object and run method play_game()
+    Initialize a Game object and run method play_game()
     """
     def __init__(self, turns = 10, pegs = 4, show_code=False):
         self.turns = turns
@@ -93,16 +95,13 @@ class Game:
         self.print_intro()        
         for turn in range(self.turns):
             self.print_prompt()
-            
             self.get_guess()
             
             if self.guess.guess == self.code.code:
                 player_won = True
                 break
-                
             else:
                 self.give_feedback()
-                
 
         if player_won:
             print "You won!\n\n"
