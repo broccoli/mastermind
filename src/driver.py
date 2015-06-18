@@ -4,7 +4,7 @@ Created on Jun 8, 2015
 @author: richard
 '''
 
-from utils import Game
+from mastermind import Game
 
 NUM_TURNS = 10
 NUM_PEGS = 4
