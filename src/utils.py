@@ -1,7 +1,7 @@
 '''
-Created on Jun 8, 2015
+Classes for playing a game of mastermind.  Create a new game object
+and then game.play_game()
 
-@author: richard
 '''
 
 
@@ -9,8 +9,6 @@ from random import randint
 
 
 
-
-    
     
 class Foo:
     
@@ -35,6 +33,9 @@ class Code:
 
     
 class Guess:
+    """
+    Used in Game class
+    """
 
     def __init__(self, guess, code):
         self.guess = guess
@@ -68,6 +69,9 @@ class Guess:
 
 class Game:
 
+    """
+    Initialist a Game object and run method play_game()
+    """
     def __init__(self, turns = 10, pegs = 4, show_code=False):
         self.turns = turns
         self.turns_remaining = turns
