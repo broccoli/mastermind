@@ -7,20 +7,6 @@ and then game.play_game()
 
 from random import randint
 
-
-
-    
-class Foo:
-    
-    def __init__(self, use_method = False):
-        if use_method:
-            self.bar = self.set_bar()
-        else:
-            self.bar = 4
-        
-    def set_bar(self):
-        self.bar = 4
-
 class Code:
     
     def __init__(self, num_pegs = 4, code = None):
